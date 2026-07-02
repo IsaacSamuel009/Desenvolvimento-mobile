@@ -18,6 +18,11 @@ export default function App() {
           <Text style={styles.notificationIcon}>🔔</Text>
         </View>
       </View>
+
+      <View style={styles.searchBox}>
+        <Text style={styles.searchIcon}>🔍</Text>
+        <Text style={styles.searchText}>Pesquisar livros, autores, temas...</Text>
+      </View>
     </View>
   );
 }
@@ -67,5 +72,26 @@ const styles = StyleSheet.create({
 
   notificationIcon: {
     fontSize: 22,
+  },
+
+  searchBox: {
+    height: 58,
+    borderWidth: 1.5,
+    borderColor: GREEN,
+    borderRadius: 30,
+    flexDirection: "row",
+    alignItems: "center",
+    paddingHorizontal: 18,
+    marginBottom: 26,
+  },
+
+  searchIcon: {
+    fontSize: 22,
+    marginRight: 10,
+  },
+
+  searchText: {
+    fontSize: 16,
+    color: "#888888",
   },
 });
