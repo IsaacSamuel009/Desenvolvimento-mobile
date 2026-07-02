@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from "react-native";
+import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 const GREEN = "#00843D";
 const DARK_GREEN = "#006B32";
@@ -22,6 +22,26 @@ export default function App() {
       <View style={styles.searchBox}>
         <Text style={styles.searchIcon}>🔍</Text>
         <Text style={styles.searchText}>Pesquisar livros, autores, temas...</Text>
+      </View>
+
+      <View style={styles.banner}>
+        <View>
+          <Text style={styles.bannerTitle}>Explore nossa biblioteca</Text>
+          <Text style={styles.bannerSubtitle}>
+            Milhares de títulos disponíveis para você!
+          </Text>
+
+          <TouchableOpacity style={styles.bannerButton}>
+            <Text style={styles.bannerButtonText}>Ver acervo</Text>
+          </TouchableOpacity>
+        </View>
+
+        <Image
+          source={{
+            uri: "https://www1.folha.uol.com.br/ilustrissima/2025/05/veja-os-melhores-livros-brasileiros-de-literatura-do-seculo-21-segundo-juri-convidado-pela-folha.shtml",
+          }}
+          style={styles.bannerImage}
+        />
       </View>
     </View>
   );
@@ -93,5 +113,52 @@ const styles = StyleSheet.create({
   searchText: {
     fontSize: 16,
     color: "#888888",
+  },
+
+  banner: {
+    backgroundColor: GREEN,
+    borderRadius: 18,
+    padding: 20,
+    minHeight: 180,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    marginBottom: 28,
+  },
+
+  bannerTitle: {
+    color: "#FFFFFF",
+    fontSize: 25,
+    fontWeight: "900",
+    width: 190,
+  },
+
+  bannerSubtitle: {
+    color: "#FFFFFF",
+    fontSize: 16,
+    marginTop: 12,
+    width: 180,
+    lineHeight: 23,
+  },
+
+  bannerButton: {
+    backgroundColor: "#FFFFFF",
+    paddingVertical: 10,
+    paddingHorizontal: 18,
+    borderRadius: 10,
+    alignSelf: "flex-start",
+    marginTop: 18,
+  },
+
+  bannerButtonText: {
+    color: GREEN,
+    fontSize: 15,
+    fontWeight: "800",
+  },
+
+  bannerImage: {
+    width: 110,
+    height: 110,
+    resizeMode: "contain",
   },
 });
