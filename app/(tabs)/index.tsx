@@ -1,4 +1,7 @@
 import { StyleSheet, Text, View } from "react-native";
+const GREEN = "#00843D";
+const DARK_GREEN = "#006B32";
+const LIGHT_GREEN = "#EAF7EF";
 
 export default function App() {
   return (
